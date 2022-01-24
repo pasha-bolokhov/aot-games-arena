@@ -12,7 +12,7 @@ export class GameComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  getGenres = (genres: string[]) => genres.join(" · ");
 }
