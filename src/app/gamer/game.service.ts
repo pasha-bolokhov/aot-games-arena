@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, from, of } from 'rxjs';
-import { map, switchMap } from "rxjs/operators";
+import { defer, Observable, from } from 'rxjs';
+import { map } from "rxjs/operators";
 import { Game } from "../models/game";
 import { GameData } from "../models/game-data";
 
@@ -16,7 +16,7 @@ export class GameService {
   constructor() { }
 
   fetchGames = (): Observable<Game[]> =>
-    from(this.fetcher()).pipe(
+    from(defer(() => this.fetcher())).pipe(
       map((data: GameData[]) => this.convertData(data)),
     );
 
