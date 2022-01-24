@@ -1,7 +1,7 @@
 /**
  * Our internal model of a game.
  */
-interface Game {
+export interface Game {
   title: string;
   platform: string;
   score: number;

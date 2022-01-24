@@ -1,7 +1,7 @@
 /**
  * Game as provided by the external source.
  */
-interface GameData {
+export interface GameData {
   "title": string;
   "platform": string;
   "score": number;

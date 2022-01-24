@@ -1,1 +1,7 @@
-<p>gamer works!</p>
+<div class="search-box">
+  <input type="text" placeholder="Start typing game title…"/>
+</div>
+<div *ngFor="let game of games">
+  <p class="title">Title: {{ game.title }}</p>
+  <p>Platform: {{ game.platform }}</p>
+</div>
