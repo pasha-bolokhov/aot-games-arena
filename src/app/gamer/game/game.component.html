@@ -2,6 +2,6 @@
   <p class="title">Title: <em>{{ game.title }}</em></p>
   <p>Platform: {{ game.platform }}</p>
   <p>Score: {{ game.score }}</p>
-  <p>Genres: {{ getGenres(game.genres) }}</p>
+  <p>Genre: {{ getGenres(game.genres) }}</p>
   <p *ngIf="game.editorsChoice">Editor's choice</p>
 </div>
