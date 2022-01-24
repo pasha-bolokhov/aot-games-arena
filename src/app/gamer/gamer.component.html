@@ -1,5 +1,7 @@
 <div class="search-box">
-  <input type="text" placeholder="Start typing game title…"/>
+  <mat-form-field>
+    <input type="text" placeholder="Start typing game title…" matInput>
+  </mat-form-field>
 </div>
 <div *ngFor="let game of games">
   <app-game [game]="game"></app-game>

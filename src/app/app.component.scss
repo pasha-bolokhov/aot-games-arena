@@ -4,7 +4,7 @@
 
 .main-banner {
   width: 100;
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -13,4 +13,10 @@
   color: purple;
   font-size: 4rem;
   font-family: 'Nunito Sans', sans-serif;
+}
+
+.game-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
