@@ -20,14 +20,14 @@ export class GameService {
       map((data: GameData[]) => this.convertData(data)),
     );
 
-  fetcher = async (): Promise<GameData[]> => {
+  private fetcher = async (): Promise<GameData[]> => {
     const response = await fetch(GameService.GAME_SOURCE);
     const dataIn: GameData[] = await response.json();
-    dataIn.shift();         // remove some junk in the beginning
+    dataIn.shift();                                                         // remove some junk in the beginning
     return dataIn;
   };
 
-  convertData = (dataIn: GameData[]): Game[] => dataIn.map(
+  private convertData = (dataIn: GameData[]): Game[] => dataIn.map(
     ({
       "title": title,
       "platform": platform,

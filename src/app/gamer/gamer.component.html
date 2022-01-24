@@ -2,6 +2,5 @@
   <input type="text" placeholder="Start typing game title…"/>
 </div>
 <div *ngFor="let game of games">
-  <p class="title">Title: {{ game.title }}</p>
-  <p>Platform: {{ game.platform }}</p>
+  <app-game [game]="game"></app-game>
 </div>
