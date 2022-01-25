@@ -1,8 +1,10 @@
 <div class="search-box">
   <mat-form-field>
-    <input type="text" placeholder="Start typing game title…" matInput>
+    <input type="text" placeholder="Start typing game title…" [(ngModel)]="searchTerm" autofocus matInput>
   </mat-form-field>
 </div>
-<div *ngFor="let game of games">
-  <app-game [game]="game"></app-game>
+<div>
+  <ng-container *ngFor="let game of ((games$ | async)! | search: searchTerm)">
+    <app-game [game]=game></app-game>
+  </ng-container>
 </div>
